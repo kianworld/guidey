@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Serif:ital,wght@0,400;0,700;1,400;1,700&family=Roboto:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+html {
+	font-family: Roboto, sans-serif;
+}
+
+body, p, h1, h2, h3, h4, h5, h6, img {
+	margin: 0;
+}
+
+p, h1, h2, h3, h4, h5, h6, img {
+	padding: 2px 40px;
+}
+
+button {
+	font-family: Roboto, sans-serif;
+}
+
+.site-header {
+	background-color: rgb(238, 252, 255);
+	color: black;
+	width: 100%;
+	padding-top: 8px;
+	padding-bottom: 8px;
+}
+
+.header-container {
+	align-items: center;
+	display: table;
+	margin-top: 10px;
+	margin-bottom: 5px;
+}
+
+.logo {
+	font-family: "Roboto Serif", serif;
+}
+
+.guide-tab {
+	border-style: none;
+	background-color: lightcoral;
+}
+
+.favorite-tab {
+	border-style: none;
+	background-color: lightyellow;
+}
+
+.search-tab {
+	border-style: none;
+	background-color: lightblue;
+}
+
+.search-button {
+	border-style: none;
+	background-color: lightblue;
+}
+
+.account-button {
+	border-style: none;
+	background-color: lightpink;
+}
+
+.site-header a {
+	color: black;
+	text-decoration: none;
+}
+
+.header-container button, .search-button {
+	width: 100px;
+	height: 30px;
+}
+
+.header-container .search-tab {
+	height: 30px;
+	width: 200px;
+}
+
+.header-container button:hover, .search-button:hover {
+	font-weight: 700;
+}
+
+.header-container nav {
+	box-sizing: border-box;
+	align-items: right;
+	display: table-cell;
+	vertical-align: middle;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+}
+
+.header-container nav ul {
+	list-style: none;
+	margin: 0;
+	padding-left: 0;
+	box-sizing: border-box;
+}
+
+.header-container nav ul li {
+	display: inline-block;
+	position: relative;
+	font-size: 11px;
+	margin: 0 30px 0 0;
+}
+
+.show-header h1 {
+	font-family: "Roboto Serif", serif;
+}
+
+.next-showing-header {
+	border-top: 3px solid black;
+	border-bottom: 3px solid black;
+	padding: 10px 40px 10px 40px;
+	font-size: 24px;
+	font-weight: 700;
+}
+
+.episode {
+	padding-top: 10px;
+}
