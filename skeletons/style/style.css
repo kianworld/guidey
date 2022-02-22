@@ -1,27 +1,36 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Serif:ital,wght@0,400;0,700;1,400;1,700&family=Roboto:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 
+/*** BASIC STUFF ***/
 html {
 	font-family: Roboto, sans-serif;
+}
+
+body {
+	background-color: rgb(238, 252, 255);
 }
 
 body, p, h1, h2, h3, h4, h5, h6, img {
 	margin: 0;
 }
 
-p, h1, h2, h3, h4, h5, h6, img {
-	padding: 2px 40px;
-}
-
 button {
 	font-family: Roboto, sans-serif;
 }
 
+.serif {
+	font-family: "Roboto Serif", serif;
+}
+
+/*** SITE HEADER STUFF ***/
 .site-header {
-	background-color: rgb(238, 252, 255);
 	color: black;
 	width: 100%;
 	padding-top: 8px;
 	padding-bottom: 8px;
+}
+
+.site-header p, .site-header h1 {
+	padding: 2px 40px;
 }
 
 .header-container {
@@ -102,18 +111,135 @@ button {
 	margin: 0 30px 0 0;
 }
 
-.show-header h1 {
-	font-family: "Roboto Serif", serif;
+/*** SHOW HEADER STUFF ***/
+.show-header {
+	display: grid;
+	grid-template-columns: [img] 200px [info] auto [buttons] 100px;
+	gap: 20px;
+	padding: 10px 40px 20px;
+	align-items: top;
 }
 
+.horizontal-poster {
+	max-width: 200px;
+}
+
+.fav-button, .stream-button {
+	border-style: none;
+	height: 30px;
+	width: 100px;
+	margin: 10px 0px;
+}
+
+.fav-button {
+	background-color: lightyellow;
+}
+
+.stream-button {
+	background-color: lightskyblue;
+}
+
+/*** SHOWTIMES STUFF ***/
 .next-showing-header {
-	border-top: 3px solid black;
-	border-bottom: 3px solid black;
-	padding: 10px 40px 10px 40px;
+	font-family: "Roboto Serif", serif;
+	border-top: 3px solid lightcoral;
+	border-bottom: 3px solid lightcoral;
+	background-color: rgb(255, 212, 212);
+	padding: 10px 40px;
 	font-size: 24px;
 	font-weight: 700;
+	height: 20px;
+}
+
+.showing {
+	background-color: white;
+	padding: 0px 40px;
+	display: grid;
+	grid-template-columns: [date] 60px [info] auto [buttons] 30px;
+	gap: 20px;
+	align-items: center;
 }
 
 .episode {
-	padding-top: 10px;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+.new {
+	background-color: rgb(255, 236, 236);
+}
+
+.episode p, .episode h3, .episode h6 {
+	padding: 2px 40px 2px 20px;
+}
+
+.airing-info {
+	width: 60px;
+	padding-right: 20px;
+	border-right: 3px solid black;
+	font-size: 14px;
+}
+
+.airing-info > span {
+	display: block;
+}
+
+.airdate {
+	font-weight: 700;
+	font-size: 18px;
+}
+
+.ep-divider {
+	border-top: 3px solid black !important;
+	border: 0px;
+	margin: 0;
+	padding: 0;
+}
+
+.remind-me {
+	border-style: none;
+	height: 30px;
+	width: 30px;
+	background-color: lightskyblue;
+}
+
+/*** FAVORITES PAGE STUFF ***/
+.favorites-page {
+	display: grid;
+	grid-template-columns: [date] auto [info] 220px;
+	gap: 20px;
+	padding: 10px 40px;
+}
+
+.filter-section {
+	border-left: 3px solid black;
+	padding-left: 20px;
+}
+
+.favorite-info {
+	display: grid;
+	grid-template-columns: [img] 200px [info] auto [buttons] 100px;
+	gap: 20px;
+	padding: 0px 0px 0px;
+	align-items: top;
+}
+
+.remind-button {
+	border-style: none;
+	height: 30px;
+	width: 100px;
+	background-color: lightskyblue;
+}
+
+.favorite-divider {
+	border-top: 3px solid black !important;
+	border: 0px;
+	margin: 10px 0px;
+}
+
+/*** FOOTER STUFF ***/
+footer {
+	width: inherit;
+	border-top: 3px solid black;
+	padding: 10px 40px;
 }

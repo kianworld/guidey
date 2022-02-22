@@ -1,12 +1,134 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Guidey</title>
+	<link rel="stylesheet" href="style/style.css">
 </head>
 <body>
-    
+	<header class="site-header">
+		<div class="header-container">
+			<h1 class="logo">Guidey</h1>
+			<nav>
+				<ul>
+					<li>
+						<button class="guide-tab">
+							<a href="guide.html">TV GUIDE</a>
+						</button>
+					</li>
+					<li>
+						<button class="favorite-tab">
+							<a href="favorites.html">FAVORITES</a>
+						</button>
+					</li>
+					<li>
+						<form action="search">
+							<input class="search-tab" type="search" name="" id="">
+							<input class="search-button" type="submit" value="SEARCH">
+						</form>
+					</li>
+					<li>
+						<button class="account-button">
+							<a href="#">LOG OUT</a>
+						</button>
+					</li>
+				</ul>
+			</nav>
+		</div>
+	</header>
+	<div class="favorites-page">
+		<div class="favorites-list">
+			<div class="favorite-info">
+				<div class="favorite-image">
+					<img class="horizontal-poster" src="https://zap2it.tmsimg.com/assets/p185638_b_v9_am.jpg?w=200" alt="">
+				</div>
+				<div class="show-info">
+					<h1>
+						<span class="serif">Robot Chicken</span>
+					</h1>
+					<h3>NEXT NEW EPISODE:</h3>
+					<h4>"Title" - 2/15 12:00a on 53 TOON</h4>
+					<h3>NEXT RERUN:</h3>
+					<h4>"Other Title" - 2/15 12:15a on 53 TOON</h4>
+					<h6>
+						<span>SHOW</span>
+						<span>Adult Animation</span>
+					</h6>
+				</div>
+				<div class="favorite-buttons">
+					<button class="fav-button">- FAVORITES</button>
+					<button class="remind-button">REMIND ME</button>
+					<button class="stream-button">STREAM IT</button>
+				</div>
+			</div> 
+			<hr class="favorite-divider">
+			<div class="favorite-info">
+				<div class="favorite-image">
+					<img class="horizontal-poster" src="https://zap2it.tmsimg.com/assets/p185886_b_v9_ac.jpg?w=200" alt="">
+				</div>
+				<div class="show-info">
+					<h1>
+						<span class="serif">TMZ</span>
+					</h1>
+					<h3>NEXT NEW EPISODE:</h3>
+					<h4>"Title" - 2/22 1:30a on 12 WOWK</h4>
+					<h3>NEXT RERUN:</h3>
+					<h4>N/A</h4>
+					<h6>
+						<span>SHOW</span>
+						<span>Adult Animation</span>
+					</h6>
+				</div>
+				<div class="favorite-buttons">
+					<button class="fav-button">- FAVORITES</button>
+					<button class="remind-button">REMIND ME</button>
+					<button class="stream-button">STREAM IT</button>
+				</div>
+			</div> 
+			<hr class="favorite-divider">
+			<div class="favorite-info">
+				<div class="favorite-image">
+					<img class="horizontal-poster" src="https://zap2it.tmsimg.com/assets/p15054143_p_v13_af.jpg?w=200" alt="">
+				</div>
+				<div class="show-info">
+					<h1>
+						<span class="serif">Shazam! (2019)</span>
+					</h1>
+					<h3>NEXT SHOWING:</h3>
+					<h4>2/22 1:30a on 39 TNT</h4>
+					<h6>
+						<span>MOVIE</span>
+						<span>Superhero</span>
+					</h6>
+				</div>
+				<div class="favorite-buttons">
+					<button class="fav-button">- FAVORITES</button>
+					<button class="remind-button">REMIND ME</button>
+					<button class="stream-button">STREAM IT</button>
+				</div>
+			</div>
+		</div>
+		<div class="filter-section">
+			<form action="filter">
+				<label for="">Filter:</label><br>
+				<ul>
+					<li><input type="checkbox" name="shows"> Shows</li>
+					<ul>
+						<li>
+							<input type="checkbox" name="reruns"> without upcoming new episodes
+						</li>
+					</ul>
+					<li><input type="checkbox" name="movies"> Movies</li>
+			</ul>
+			</form>
+		</div>
+	</div>
+	<footer class="site-footer">
+		<div class="site-footer">
+			Guidey is a guide. This is a footer.
+		</div>
+	</footer>
 </body>
 </html>
