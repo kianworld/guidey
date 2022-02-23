@@ -1,12 +1,489 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Guidey</title>
+	<link rel="stylesheet" href="style/style.css">
 </head>
 <body>
-    
+	<header class="site-header">
+		<div class="header-container">
+			<h1 class="logo">Guidey</h1>
+			<nav>
+				<ul>
+					<li>
+						<button class="guide-tab">
+							<a href="guide.html">TV GUIDE</a>
+						</button>
+					</li>
+					<li>
+						<button class="favorite-tab">
+							<a href="favorites.html">FAVORITES</a>
+						</button>
+					</li>
+					<li>
+						<form action="search">
+							<input class="search-tab" type="search" name="" id="">
+							<input class="search-button" type="submit" value="SEARCH">
+						</form>
+					</li>
+					<li>
+						<button class="account-button">
+							<a href="#">LOG OUT</a>
+						</button>
+					</li>
+				</ul>
+			</nav>
+		</div>
+	</header>
+	<div class="guide-header">
+		<div class="provider">
+			<p>
+				<em>Your provider is Charter Spectrum Moreno (41101)</em> <button>CHANGE PROVIDER</button>
+			</p>
+		</div>
+		<div class="view-options">
+			<button class="view-option-button">VIEW AS LIST</button>
+			<button class="view-option-button" title="coming soon!" disabled="disabled" style="cursor: not-allowed;">VIEW AS GRID</button>
+		</div>
+	</div>
+	<div class="list-view-guide">
+		<div class="list-view-channel">
+			<div class="channel-info">
+				<div class="channel-number">1</div>
+				<div class="channel-name">SPCTNEWS</div>
+			</div>
+			<div class="list-view-listings">
+				<div class="list-view-showing now">
+					<div class="list-timeslot">2:00p - 3:00p</div>
+					<div class="program-name">Spectrum News 1 Afternoon News and Weather</div>
+					<div class="list-info">Episode title</div>
+					<div class="list-buttons">
+						<button class="fav-icon">💛</button>
+						<button class="remind-icon"><p class="bell">🔔</p></button>
+					</div>
+				</div>
+				<div class="list-view-showing next">
+					<div class="list-timeslot">3:00p - 3:30p</div>
+					<div class="program-name">Spectrum News 1 Afternoon News and Weather</div>
+					<div class="list-info">Episode title</div>
+					<div class="list-buttons">
+						<button class="fav-icon">💛</button>
+						<button class="remind-icon"><p class="bell">🔔</p></button>
+					</div>
+				</div>
+				<div class="list-view-showing next">
+					<div class="list-timeslot">3:30p - 5:00p</div>
+					<div class="program-name">Spectrum News 1 Afternoon News and Weather</div>
+					<div class="list-info">Episode title</div>
+					<div class="list-buttons">
+						<button class="fav-icon">💛</button>
+						<button class="remind-icon"><p class="bell">🔔</p></button>
+					</div>
+				</div>
+				<div class="see-full-schedule">
+					<button><a href="#">See full schedule</a></button>
+				</div>
+			</div>
+		</div>
+		
+		<hr class="favorite-divider">
+		<div class="list-view-channel">
+			<div class="channel-info">
+				<div class="channel-number">2</div>
+				<div class="channel-name">WLPX</div>
+			</div>
+			<div class="list-view-listings">
+				<div class="list-view-showing now">
+					<div class="list-timeslot">2:00p - 3:00p</div>
+					<div class="program-name">Chicago Fire</div>
+					<div class="list-info">Episode title</div>
+					<div class="list-buttons">
+						<button class="fav-icon">💛</button>
+						<button class="remind-icon"><p class="bell">🔔</p></button>
+					</div>
+				</div>
+				<div class="list-view-showing next">
+					<div class="list-timeslot">3:00p - 4:00p</div>
+					<div class="program-name">Chicago Fire</div>
+					<div class="list-info">Episode title</div>
+					<div class="list-buttons">
+						<button class="fav-icon">💛</button>
+						<button class="remind-icon"><p class="bell">🔔</p></button>
+					</div>
+				</div>
+				<div class="list-view-showing next">
+					<div class="list-timeslot">4:00p - 5:00p</div>
+					<div class="program-name">Chicago Fire</div>
+					<div class="list-info">Episode title</div>
+					<div class="list-buttons">
+						<button class="fav-icon">💛</button>
+						<button class="remind-icon"><p class="bell">🔔</p></button>
+					</div>
+				</div>
+				<div class="see-full-schedule">
+					<button><a href="#">See full schedule</a></button>
+				</div>
+			</div>
+		</div>
+		<hr class="favorite-divider">
+		<div class="list-view-channel">
+			<div class="channel-info">
+				<div class="channel-number">3</div>
+				<div class="channel-name">TBS</div>
+			</div>
+			<div class="list-view-listings">
+				<div class="list-view-showing now">
+					<div class="list-timeslot">2:00p - 2:30p</div>
+					<div class="program-name">Friends</div>
+					<div class="list-info">Episode title</div>
+					<div class="list-buttons">
+						<button class="fav-icon">💛</button>
+						<button class="remind-icon"><p class="bell">🔔</p></button>
+					</div>
+				</div>
+				<div class="list-view-showing next">
+					<div class="list-timeslot">2:30p - 3:00p</div>
+					<div class="program-name">Friends</div>
+					<div class="list-info">Episode title</div>
+					<div class="list-buttons">
+						<button class="fav-icon">💛</button>
+						<button class="remind-icon"><p class="bell">🔔</p></button>
+					</div>
+				</div>
+				<div class="list-view-showing next">
+					<div class="list-timeslot">3:00p - 3:30p</div>
+					<div class="program-name">Friends</div>
+					<div class="list-info">Episode title</div>
+					<div class="list-buttons">
+						<button class="fav-icon">💛</button>
+						<button class="remind-icon"><p class="bell">🔔</p></button>
+					</div>
+				</div>
+				<div class="see-full-schedule">
+					<button><a href="#">See full schedule</a></button>
+				</div>
+			</div>
+		</div>
+		<hr class="favorite-divider">
+		<div class="list-view-channel">
+			<div class="channel-info">
+				<div class="channel-number">4</div>
+				<div class="channel-name">WSAZ</div>
+			</div>
+			<div class="list-view-listings">
+				<div class="list-view-showing now">
+					<div class="list-timeslot">2:00p - 3:00p</div>
+					<div class="program-name">The Good Dish</div>
+					<div class="list-info">Episode title<span class="new-text">NEW</span></div>
+					<div class="list-buttons">
+						<button class="fav-icon">💛</button>
+						<button class="remind-icon"><p class="bell">🔔</p></button>
+					</div>
+				</div>
+				<div class="list-view-showing next">
+					<div class="list-timeslot">3:00p - 4:00p</div>
+					<div class="program-name">Dr. Phil</div>
+					<div class="list-info">Episode title<span class="new-text">NEW</span></div>
+					<div class="list-buttons">
+						<button class="fav-icon">💛</button>
+						<button class="remind-icon"><p class="bell">🔔</p></button>
+					</div>
+				</div>
+				<div class="list-view-showing next">
+					<div class="list-timeslot">4:00p - 5:00p</div>
+					<div class="program-name">WSAZ News at Four</div>
+					<div class="list-info">Episode title</div>
+					<div class="list-buttons">
+						<button class="fav-icon">💛</button>
+						<button class="remind-icon"><p class="bell">🔔</p></button>
+					</div>
+				</div>
+				<div class="see-full-schedule">
+					<button><a href="#">See full schedule</a></button>
+				</div>
+			</div>
+		</div>
+		<hr class="favorite-divider">
+		<div class="list-view-channel">
+			<div class="channel-info">
+				<div class="channel-number">5</div>
+				<div class="channel-name">FREEFRM</div>
+			</div>
+			<div class="list-view-listings">
+				<div class="list-view-showing now">
+					<div class="list-timeslot">12:30p - 3:00p</div>
+					<div class="program-name">Men in Black 3 (2012)</div>
+					<div class="list-info"><span class="movie-text">MOVIE</span></div>
+					<div class="list-buttons">
+						<button class="fav-icon">💛</button>
+						<button class="remind-icon"><p class="bell">🔔</p></button>
+					</div>
+				</div>
+				<div class="list-view-showing next">
+					<div class="list-timeslot">3:00p - 6:00p</div>
+					<div class="program-name">Cast Away (2000)</div>
+					<div class="list-info"><span class="movie-text">MOVIE</span></div>
+					<div class="list-buttons">
+						<button class="fav-icon">💛</button>
+						<button class="remind-icon"><p class="bell">🔔</p></button>
+					</div>
+				</div>
+				<div class="list-view-showing next">
+					<div class="list-timeslot">6:00p - 6:30p</div>
+					<div class="program-name">The Office</div>
+					<div class="list-info">Episode title</div>
+					<div class="list-buttons">
+						<button class="fav-icon">💛</button>
+						<button class="remind-icon"><p class="bell">🔔</p></button>
+					</div>
+				</div>
+				<div class="see-full-schedule">
+					<button><a href="#">See full schedule</a></button>
+				</div>
+			</div>
+		</div>
+		<hr class="favorite-divider">
+		<div class="list-view-channel">
+			<div class="channel-info">
+				<div class="channel-number">6</div>
+				<div class="channel-name">WVPB</div>
+			</div>
+			<div class="list-view-listings">
+				<div class="list-view-showing now">
+					<div class="list-timeslot">2:00p - 2:30p</div>
+					<div class="program-name">Daniel Tiger's Neighborhood</div>
+					<div class="list-info">Episode title</div>
+					<div class="list-buttons">
+						<button class="fav-icon">💛</button>
+						<button class="remind-icon"><p class="bell">🔔</p></button>
+					</div>
+				</div>
+				<div class="list-view-showing next">
+					<div class="list-timeslot">2:30p - 3:00p</div>
+					<div class="program-name">Let's Go Luna!</div>
+					<div class="list-info">Episode title</div>
+					<div class="list-buttons">
+						<button class="fav-icon">💛</button>
+						<button class="remind-icon"><p class="bell">🔔</p></button>
+					</div>
+				</div>
+				<div class="list-view-showing next">
+					<div class="list-timeslot">3:00p - 3:30p</div>
+					<div class="program-name">Nature Cat</div>
+					<div class="list-info">Episode title</div>
+					<div class="list-buttons">
+						<button class="fav-icon">💛</button>
+						<button class="remind-icon"><p class="bell">🔔</p></button>
+					</div>
+				</div>
+				<div class="see-full-schedule">
+					<button><a href="#">See full schedule</a></button>
+				</div>
+			</div>
+		</div>
+		<hr class="favorite-divider">
+		<div class="list-view-channel">
+			<div class="channel-info">
+				<div class="channel-number">7</div>
+				<div class="channel-name">WKAS</div>
+			</div>
+			<div class="list-view-listings">
+				<div class="list-view-showing now">
+					<div class="list-timeslot">2:00p - 2:30p</div>
+					<div class="program-name">Daniel Tiger's Neighborhood</div>
+					<div class="list-info">Episode title</div>
+					<div class="list-buttons">
+						<button class="fav-icon">💛</button>
+						<button class="remind-icon"><p class="bell">🔔</p></button>
+					</div>
+				</div>
+				<div class="list-view-showing next">
+					<div class="list-timeslot">2:30p - 3:00p</div>
+					<div class="program-name">Let's Go Luna!</div>
+					<div class="list-info">Episode title</div>
+					<div class="list-buttons">
+						<button class="fav-icon">💛</button>
+						<button class="remind-icon"><p class="bell">🔔</p></button>
+					</div>
+				</div>
+				<div class="list-view-showing next">
+					<div class="list-timeslot">3:00p - 3:30p</div>
+					<div class="program-name">Pinkalicious & Peterrific</div>
+					<div class="list-info">Episode title</div>
+					<div class="list-buttons">
+						<button class="fav-icon">💛</button>
+						<button class="remind-icon"><p class="bell">🔔</p></button>
+					</div>
+				</div>
+				<div class="see-full-schedule">
+					<button><a href="#">See full schedule</a></button>
+				</div>
+			</div>
+		</div>
+		<hr class="favorite-divider">
+		<div class="list-view-channel">
+			<div class="channel-info">
+				<div class="channel-number">8</div>
+				<div class="channel-name">WCHS</div>
+			</div>
+			<div class="list-view-listings">
+				<div class="list-view-showing now">
+					<div class="list-timeslot">2:00p - 3:00p</div>
+					<div class="program-name">General Hospital</div>
+					<div class="list-info">Episode title<span class="new-text">NEW</span></div>
+					<div class="list-buttons">
+						<button class="fav-icon">💛</button>
+						<button class="remind-icon"><p class="bell">🔔</p></button>
+					</div>
+				</div>
+				<div class="list-view-showing next">
+					<div class="list-timeslot">3:00p - 4:00p</div>
+					<div class="program-name">The Kelly Clarkson Show</div>
+					<div class="list-info">Episode title<span class="new-text">NEW</span></div>
+					<div class="list-buttons">
+						<button class="fav-icon">💛</button>
+						<button class="remind-icon"><p class="bell">🔔</p></button>
+					</div>
+				</div>
+				<div class="list-view-showing next">
+					<div class="list-timeslot">4:00p - 4:30p</div>
+					<div class="program-name">Judge Judy</div>
+					<div class="list-info">Episode title</div>
+					<div class="list-buttons">
+						<button class="fav-icon">💛</button>
+						<button class="remind-icon"><p class="bell">🔔</p></button>
+					</div>
+				</div>
+				<div class="see-full-schedule">
+					<button><a href="#">See full schedule</a></button>
+				</div>
+			</div>
+		</div>
+		<hr class="favorite-divider">
+		<div class="list-view-channel">
+			<div class="channel-info">
+				<div class="channel-number">9</div>
+				<div class="channel-name">WOCW</div>
+			</div>
+			<div class="list-view-listings">
+				<div class="list-view-showing now">
+					<div class="list-timeslot">2:00p - 3:00p</div>
+					<div class="program-name">The Real</div>
+					<div class="list-info">Episode title<span class="new-text">NEW</span></div>
+					<div class="list-buttons">
+						<button class="fav-icon">💛</button>
+						<button class="remind-icon"><p class="bell">🔔</p></button>
+					</div>
+				</div>
+				<div class="list-view-showing next">
+					<div class="list-timeslot">3:00p - 4:00p</div>
+					<div class="program-name">Law & Order: Special Victims Unit</div>
+					<div class="list-info">Episode title</div>
+					<div class="list-buttons">
+						<button class="fav-icon">💛</button>
+						<button class="remind-icon"><p class="bell">🔔</p></button>
+					</div>
+				</div>
+				<div class="list-view-showing next">
+					<div class="list-timeslot">4:00p - 4:30p</div>
+					<div class="program-name">black-ish</div>
+					<div class="list-info">Episode title</div>
+					<div class="list-buttons">
+						<button class="fav-icon">💛</button>
+						<button class="remind-icon"><p class="bell">🔔</p></button>
+					</div>
+				</div>
+				<div class="see-full-schedule">
+					<button><a href="#">See full schedule</a></button>
+				</div>
+			</div>
+		</div>
+		<hr class="favorite-divider">
+		<div class="list-view-channel">
+			<div class="channel-info">
+				<div class="channel-number">11</div>
+				<div class="channel-name">WVAH</div>
+			</div>
+			<div class="list-view-listings">
+				<div class="list-view-showing now">
+					<div class="list-timeslot">2:00p - 2:30p</div>
+					<div class="program-name">The Mary Tyler Moore Show</div>
+					<div class="list-info">Episode title</div>
+					<div class="list-buttons">
+						<button class="fav-icon">💛</button>
+						<button class="remind-icon"><p class="bell">🔔</p></button>
+					</div>
+				</div>
+				<div class="list-view-showing next">
+					<div class="list-timeslot">2:30p - 3:00p</div>
+					<div class="program-name">The Mary Tyler Moore Show</div>
+					<div class="list-info">Episode title</div>
+					<div class="list-buttons">
+						<button class="fav-icon">💛</button>
+						<button class="remind-icon"><p class="bell">🔔</p></button>
+					</div>
+				</div>
+				<div class="list-view-showing next">
+					<div class="list-timeslot">3:00p - 3:30p</div>
+					<div class="program-name">The Dick Van Dyke Show</div>
+					<div class="list-info">Episode title</div>
+					<div class="list-buttons">
+						<button class="fav-icon">💛</button>
+						<button class="remind-icon"><p class="bell">🔔</p></button>
+					</div>
+				</div>
+				<div class="see-full-schedule">
+					<button><a href="#">See full schedule</a></button>
+				</div>
+			</div>
+		</div>
+		<hr class="favorite-divider">
+		<div class="list-view-channel">
+			<div class="channel-info">
+				<div class="channel-number">12</div>
+				<div class="channel-name">WOWK</div>
+			</div>
+			<div class="list-view-listings">
+				<div class="list-view-showing now">
+					<div class="list-timeslot">2:00p - 3:00p</div>
+					<div class="program-name">UFEA Champions League Today</div>
+					<div class="list-info">Episode title<span class="new-text">LIVE</span></div>
+					<div class="list-buttons">
+						<button class="fav-icon">💛</button>
+						<button class="remind-icon"><p class="bell">🔔</p></button>
+					</div>
+				</div>
+				<div class="list-view-showing next">
+					<div class="list-timeslot">3:00p - 5:00p</div>
+					<div class="program-name">UFEA Champions League</div>
+					<div class="list-info">Episode title<span class="new-text">LIVE</span></div>
+					<div class="list-buttons">
+						<button class="fav-icon">💛</button>
+						<button class="remind-icon"><p class="bell">🔔</p></button>
+					</div>
+				</div>
+				<div class="list-view-showing next">
+					<div class="list-timeslot">5:00p - 5:30p</div>
+					<div class="program-name">13 News at 5pm</div>
+					<div class="list-info">Episode title<span class="new-text">NEW</span></div>
+					<div class="list-buttons">
+						<button class="fav-icon">💛</button>
+						<button class="remind-icon"><p class="bell">🔔</p></button>
+					</div>
+				</div>
+				<div class="see-full-schedule">
+					<button><a href="#">See full schedule</a></button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<footer class="site-footer">
+		<div class="site-footer">
+			Skeleton prototype. Name still pending. <a href="guide.html">TV GUIDE</a> - <a href="favorites.html">FAVORITES</a> - <a href="info.html">INFO PAGE PROTOTYPE</a>
+		</div>
+	</footer>
 </body>
 </html>

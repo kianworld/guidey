@@ -7,14 +7,22 @@ html {
 
 body {
 	background-color: rgb(238, 252, 255);
+	overflow-x: hidden;
 }
 
 body, p, h1, h2, h3, h4, h5, h6, img {
 	margin: 0;
 }
 
-button {
+button, form, form > input {
 	font-family: Roboto, sans-serif;
+	height: 30px;
+	border-style: none;
+	transition-duration: .2s;
+}
+
+button:hover, form:hover {
+	transform: scale(115%);
 }
 
 .serif {
@@ -23,21 +31,21 @@ button {
 
 /*** SITE HEADER STUFF ***/
 .site-header {
+	background-color: rgb(238, 252, 255);
 	color: black;
 	width: 100%;
-	padding-top: 8px;
-	padding-bottom: 8px;
-}
-
-.site-header p, .site-header h1 {
-	padding: 2px 40px;
+	padding: 20px 40px;
+	position: sticky;
+	top: 0;
+	border-bottom: 3px solid black;
+	max-width: 1280px;
+	margin: 0 auto;
 }
 
 .header-container {
 	align-items: center;
-	display: table;
-	margin-top: 10px;
-	margin-bottom: 5px;
+	display: grid;
+	grid-template-columns: [logo] 150px [buttons] auto;
 }
 
 .logo {
@@ -45,27 +53,22 @@ button {
 }
 
 .guide-tab {
-	border-style: none;
 	background-color: lightcoral;
 }
 
 .favorite-tab {
-	border-style: none;
 	background-color: lightyellow;
 }
 
 .search-tab {
-	border-style: none;
 	background-color: lightblue;
 }
 
 .search-button {
-	border-style: none;
 	background-color: lightblue;
 }
 
 .account-button {
-	border-style: none;
 	background-color: lightpink;
 }
 
@@ -76,11 +79,9 @@ button {
 
 .header-container button, .search-button {
 	width: 100px;
-	height: 30px;
 }
 
 .header-container .search-tab {
-	height: 30px;
 	width: 200px;
 }
 
@@ -118,6 +119,9 @@ button {
 	gap: 20px;
 	padding: 10px 40px 20px;
 	align-items: top;
+	
+	max-width: 1280px;
+	margin: 0 auto;
 }
 
 .horizontal-poster {
@@ -125,8 +129,6 @@ button {
 }
 
 .fav-button, .stream-button {
-	border-style: none;
-	height: 30px;
 	width: 100px;
 	margin: 10px 0px;
 }
@@ -149,6 +151,8 @@ button {
 	font-size: 24px;
 	font-weight: 700;
 	height: 20px;
+	max-width: 1280px;
+	margin: 0 auto;
 }
 
 .showing {
@@ -158,6 +162,8 @@ button {
 	grid-template-columns: [date] 60px [info] auto [buttons] 30px;
 	gap: 20px;
 	align-items: center;
+	max-width: 1280px;
+	margin: 0 auto;
 }
 
 .episode {
@@ -192,15 +198,50 @@ button {
 .ep-divider {
 	border-top: 3px solid black !important;
 	border: 0px;
-	margin: 0;
-	padding: 0;
+	max-width: 1360px;
+	margin: 0 auto;
 }
 
-.remind-me {
-	border-style: none;
-	height: 30px;
+.fav-icon {
+	background-color: lightyellow;
+	width: 30px;
+}
+
+.remind-icon {
 	width: 30px;
 	background-color: lightskyblue;
+}
+
+.remind-icon:hover > .bell {
+  animation: ring 4s .7s ease-in-out infinite;
+}
+
+@keyframes ring {
+  0% { transform: rotate(0); }
+  1% { transform: rotate(30deg); }
+  3% { transform: rotate(-28deg); }
+  5% { transform: rotate(34deg); }
+  7% { transform: rotate(-32deg); }
+  9% { transform: rotate(30deg); }
+  11% { transform: rotate(-28deg); }
+  13% { transform: rotate(26deg); }
+  15% { transform: rotate(-24deg); }
+  17% { transform: rotate(22deg); }
+  19% { transform: rotate(-20deg); }
+  21% { transform: rotate(18deg); }
+  23% { transform: rotate(-16deg); }
+  25% { transform: rotate(14deg); }
+  27% { transform: rotate(-12deg); }
+  29% { transform: rotate(10deg); }
+  31% { transform: rotate(-8deg); }
+  33% { transform: rotate(6deg); }
+  35% { transform: rotate(-4deg); }
+  37% { transform: rotate(2deg); }
+  39% { transform: rotate(-1deg); }
+  41% { transform: rotate(1deg); }
+
+  43% { transform: rotate(0); }
+  100% { transform: rotate(0); }
 }
 
 /*** FAVORITES PAGE STUFF ***/
@@ -209,6 +250,8 @@ button {
 	grid-template-columns: [date] auto [info] 220px;
 	gap: 20px;
 	padding: 10px 40px;
+	max-width: 1280px;
+	margin: 0 auto;
 }
 
 .filter-section {
@@ -225,8 +268,6 @@ button {
 }
 
 .remind-button {
-	border-style: none;
-	height: 30px;
 	width: 100px;
 	background-color: lightskyblue;
 }
@@ -237,9 +278,123 @@ button {
 	margin: 10px 0px;
 }
 
+/*** GUIDE STUFF ***/
+.guide-header {
+	background-color: lightcyan;
+	display: grid;
+	grid-template-columns: [provider] auto [buttons] 205px;
+	padding: 10px 40px 10px;
+	border-bottom: 3px solid black;
+	align-items: center;
+	max-width: 1280px;
+	margin: 0 auto;
+}
+
+.view-option-button {
+	width: 100px;
+	margin: 0;
+	padding: 0;
+}
+
+.list-view-guide {
+	padding: 10px 40px;
+	background-color: white;
+	max-width: 1280px;
+	margin: 0 auto;
+}
+
+.list-view-channel {
+	display: grid;
+	grid-template-columns: [channel] 100px [listings] auto;
+}
+
+.channel-info {
+	display: grid;
+	grid-template-rows: 50px auto;
+}
+
+.channel-number {
+	font-family: "Roboto Serif", serif;
+	font-size: 50px;
+	font-weight: 700;
+}
+
+.channel-name {
+	font-weight: 700;
+}
+
+.list-view-showing {
+	display: grid;
+	grid-template-columns: [timeslot] 100px [show] auto [iconbuttons] 64px;
+	grid-template-areas: "timeslot show iconbuttons"
+	"timeslot epinfo iconbuttons";
+	align-items: center;
+	margin-bottom: 10px;
+	height: 40px;
+}
+
+.list-timeslot {
+	font-size: 12px;
+	font-style: italic;
+	grid-area: timeslot;
+}
+
+.program-name {
+	font-weight: 700;
+	grid-area: show;
+	text-overflow: ellipsis;
+	overflow: hidden;
+}
+
+.now > .program-name {
+	font-size: 22px;
+}
+
+.now > .list-timeslot {
+	font-weight: 700;
+}
+
+.list-info {
+	grid-area: epinfo;
+	font-size: 12px;
+}
+
+.new-text {
+	margin-left: 5px;
+	color: red;
+	font-weight: 700;
+}
+
+.movie-text {
+	color: fuchsia;
+	font-weight: 700;
+}
+
+.see-full-schedule > button {
+	margin-top: 5px;
+	width: 150px;
+	text-transform: uppercase;
+}
+
+.see-full-schedule > button > a {
+	text-decoration: none;
+	color: black;
+}
+
+.list-buttons {
+	display: none;
+	grid-area: iconbuttons;
+}
+
+.list-view-showing:hover > .list-buttons {
+	display: block;
+}
+
 /*** FOOTER STUFF ***/
 footer {
 	width: inherit;
 	border-top: 3px solid black;
 	padding: 10px 40px;
+	max-width: 1280px;
+	margin: 0 auto;
 }
