@@ -1,0 +1,181 @@
+/* Default font is Roboto */
+body {
+	font-family: 'Roboto', sans-serif;
+}
+
+/* Squaring off button corners */
+.btn, form, .form-control {
+	border: none;
+	border-radius: 0rem;
+}
+
+/* "Guidey" in header */
+.navbar-brand {
+	font-family: 'Roboto Serif', serif;
+	font-weight: 800;
+	font-size: 28px;
+}
+
+/* Changing default background on header */
+.navbar {
+	background-color: rgb(238, 252, 255);
+}
+
+.navbar-toggler {
+	border: none;
+	border-radius: 0rem;
+	background-color: lightblue;
+	transition: none;
+}
+
+.navbar-toggler:focus {
+    box-shadow: 0 0 0 0.25rem rgba(173, 216, 230, 0.5);
+}
+
+form .btn {
+	width: 100px;
+	background-color: lightblue;
+	color: black;
+}
+
+.guide-header {
+	background-color: lightblue;
+	padding: 10px 0px;
+	align-items: center;
+}
+
+.guide-header .btn {
+	background-color: lightcoral;
+	color: black;
+}
+
+.btn-fav {
+	width: 30px;
+	height: 30px;
+	background-color: lightgoldenrodyellow;
+	padding: 0;
+	text-align: center;
+}
+
+.btn-remind {
+	width: 30px;
+	height: 30px;
+	background-color: lightskyblue;
+	padding: 0;
+	text-align: center;
+}
+
+.btn-remind > .bell {
+	margin: 0;
+}
+
+.btn-remind:hover > .bell:hover {
+	animation: ring 4s .7s ease-in-out infinite;
+}
+
+@keyframes ring {
+	0% { transform: rotate(0); }
+	1% { transform: rotate(30deg); }
+	3% { transform: rotate(-28deg); }
+	5% { transform: rotate(34deg); }
+	7% { transform: rotate(-32deg); }
+	9% { transform: rotate(30deg); }
+	11% { transform: rotate(-28deg); }
+	13% { transform: rotate(26deg); }
+	15% { transform: rotate(-24deg); }
+	17% { transform: rotate(22deg); }
+	19% { transform: rotate(-20deg); }
+	21% { transform: rotate(18deg); }
+	23% { transform: rotate(-16deg); }
+	25% { transform: rotate(14deg); }
+	27% { transform: rotate(-12deg); }
+	29% { transform: rotate(10deg); }
+	31% { transform: rotate(-8deg); }
+	33% { transform: rotate(6deg); }
+	35% { transform: rotate(-4deg); }
+	37% { transform: rotate(2deg); }
+	39% { transform: rotate(-1deg); }
+	41% { transform: rotate(1deg); }
+	43% { transform: rotate(0); }
+	100% { transform: rotate(0); }
+}
+
+.hidden-buttons {
+	display: none;
+}
+
+.list-view-showing:hover .hidden-buttons {
+	display: block;
+}
+
+/* TRY TO BOOTSTRAPIFY */
+
+.channel-number {
+	font-family: "Roboto Serif", serif;
+	font-size: 50px;
+	font-weight: 700;
+}
+
+.channel-name {
+	font-weight: 700;
+}
+
+.list-view-showing {
+	align-items: center;
+}
+
+.list-timeslot {
+	font-size: 12px;
+	font-style: italic;
+	grid-area: timeslot;
+	width: 110px;
+}
+
+.program-name {
+	font-weight: 700;
+	grid-area: show;
+}
+
+.now .program-name {
+	font-size: 22px;
+}
+
+.now .list-timeslot {
+	font-weight: 700;
+}
+
+.list-info {
+	grid-area: epinfo;
+	font-size: 12px;
+}
+
+.new-text {
+	margin-left: 5px;
+	color: red;
+	font-weight: 700;
+}
+
+.movie-text {
+	color: fuchsia;
+	font-weight: 700;
+}
+
+.see-full-schedule > button {
+	margin-top: 5px;
+	width: 150px;
+	text-transform: uppercase;
+}
+
+.see-full-schedule > button > a {
+	text-decoration: none;
+	color: black;
+}
+
+.list-buttons {
+	display: none;
+	grid-area: iconbuttons;
+}
+
+.list-view-showing:hover > .list-buttons {
+	display: block;
+}
