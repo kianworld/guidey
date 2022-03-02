@@ -1,4 +1,4 @@
-/* Default font is Roboto */
+/* Makes default font Roboto */
 body {
 	font-family: 'Roboto', sans-serif;
 }
@@ -9,7 +9,7 @@ body {
 	border-radius: 0rem;
 }
 
-/* "Guidey" in header */
+/* "Guidey" in header is Roboto Serif */
 .navbar-brand {
 	font-family: 'Roboto Serif', serif;
 	font-weight: 800;
@@ -21,6 +21,7 @@ body {
 	background-color: rgb(238, 252, 255);
 }
 
+/* Updating toggler icon's radius and shadows */
 .navbar-toggler {
 	border: none;
 	border-radius: 0rem;
@@ -32,23 +33,27 @@ body {
     box-shadow: 0 0 0 0.25rem rgba(173, 216, 230, 0.5);
 }
 
+/* Updating form button */
 form .btn {
 	width: 100px;
 	background-color: lightblue;
 	color: black;
 }
 
+/* Guide header color and padding */
 .guide-header {
 	background-color: lightblue;
 	padding: 10px 0px;
 	align-items: center;
 }
 
+/* Guide view buttons */
 .guide-header .btn {
 	background-color: lightcoral;
 	color: black;
 }
 
+/* Small add to favorites button */
 .btn-fav {
 	width: 30px;
 	height: 30px;
@@ -57,6 +62,7 @@ form .btn {
 	text-align: center;
 }
 
+/* Small reminder button */
 .btn-remind {
 	width: 30px;
 	height: 30px;
@@ -65,10 +71,12 @@ form .btn {
 	text-align: center;
 }
 
+/* Fixing bell icon */
 .btn-remind > .bell {
 	margin: 0;
 }
 
+/* Bell animation */
 .btn-remind:hover > .bell:hover {
 	animation: ring 4s .7s ease-in-out infinite;
 }
@@ -100,6 +108,7 @@ form .btn {
 	100% { transform: rotate(0); }
 }
 
+/* Hide buttons on list view, appear when hovered */
 .hidden-buttons {
 	display: none;
 }
@@ -178,4 +187,44 @@ form .btn {
 
 .list-view-showing:hover > .list-buttons {
 	display: block;
+}
+
+.favorite-buttons {
+	width: 132px;
+	padding: 0;
+}
+
+.favorite-buttons > button {
+	width: 120px;
+	margin-bottom: 10px;
+}
+
+.serif {
+	font-family: "Roboto Serif", serif;
+	font-weight: 800;
+}
+
+.small {
+	font-size: 12px;
+}
+
+.description {
+	line-height: 1.3rem;
+	padding-bottom: 5px;
+}
+
+.showing-header {
+	margin-top: 10px;
+}
+
+.btn-favorite {
+	background-color: lightgoldenrodyellow;
+}
+
+.btn-remind-full {
+	background-color: lightskyblue;
+}
+
+.btn-stream-it {
+	background-color: lightgreen;
 }
