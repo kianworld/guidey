@@ -1,0 +1,22 @@
+<%- include("html_header") -%>
+<body>
+	<%- include("site_header") -%>
+	<div class="py-3 mx-5">
+        <div class="fs-2 serif">Login with your Schedules Direct credentials</div>
+        <div>You need a <a href="https://schedulesdirect.org/">Schedules Direct</a> account to use this website.</div>
+        <div>Membership is $6 for 2 months or $25 for a year.</div>
+        <hr>
+        <form action="/" method="post">
+            <div class="mb-3">
+                <label for="usernameInput" class="form-label">Username</label>
+                <input type="text" name="sdUsername" class="form-control form-login" id="usernameInput">
+            </div>
+            <div class="mb-3">
+                <label for="passInput" class="form-label">Password</label>
+                <input type="password" name="sdPassword" class="form-control form-login" id="passInput">
+            </div>
+            <button type="submit" class="btn">Log me in</button>
+        </form>
+        <div>You'll need to sign in every day.</div>
+	</div>
+<%- include("footer") -%>

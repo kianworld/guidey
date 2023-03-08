@@ -1,0 +1,38 @@
+<%- include("html_header") -%>
+<body>
+	<%- include("site_header") -%>
+	<div class="py-3 mx-5">
+        <div class="fs-2 serif">Edit providers</div>
+        <div>You are limited to six changes a day.</div>
+        <div>To find provider IDs, enter your ZIP code here.</div>
+        <form action="/zipcode" method="post">
+			<div class="row g-3 align-items-center">
+				<div class="col-auto">
+					<input type="text" name="zipCode" class="form-control form-login" id="zipCode">
+				</div>
+				<div class="col-auto">
+					<button type="submit" class="btn">Search</button>
+				</div>
+			</div>
+        </form>
+        <hr>
+        <%for (var i = 0; i < displayLineupArray.length; i++) {%>
+        <%var j = i + 1%>
+        <div class="row">
+            <div class="row list-view-showing">
+                <div class="col-auto">
+                    <a href="/removeprovider?provider=<%=displayLineupArray[i].provider_ID%>">
+                        <button class="btn btn-remove" data-bs-toggle="tooltip" data-bs-placement="top" title="Remove">X</button>
+                    </a>
+                </div>
+                <div class="col">
+                    <div class="row">
+                        <div class="col-12 program-name px-0"><%=displayLineupArray[i].provider_name%></div>
+                        <div class="col-12 list-info px-0">Provider <%=j%></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <%}%>
+	</div>
+<%- include("footer") -%>

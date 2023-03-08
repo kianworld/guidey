@@ -1,0 +1,9 @@
+<%- include("html_header") -%>
+<body>
+	<%- include("site_header") -%>
+	<div class="py-3 mx-5">
+        <div class="fs-2 serif">Authenticated!</div>
+        <div>Your token is <%=displayToken%></div>
+        <button><a href="/guide">Go to guide</a></button>
+	</div>
+<%- include("footer") -%>

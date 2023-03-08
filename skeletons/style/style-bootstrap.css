@@ -121,7 +121,7 @@ form .btn {
 
 .channel-number {
 	font-family: "Roboto Serif", serif;
-	font-size: 50px;
+	font-size: 30px;
 	font-weight: 700;
 }
 
@@ -227,4 +227,40 @@ form .btn {
 
 .btn-stream-it {
 	background-color: lightgreen;
+}
+
+.form-login {
+	background-color: lightgoldenrodyellow;
+}
+
+.form-provider {
+	background-color: lightgoldenrodyellow;
+	width: 300px;
+}
+
+.card {
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+form .btn-provider {
+	width: 40px;
+}
+
+form .btn-edit {
+	width: 70px;
+}
+
+form .btn-remove {
+	width: 40px;
+	background-color: lightcoral;
+	text-align: center;
+}
+
+.btn-add {
+	width: 30px;
+	height: 30px;
+	background-color: lightgreen;
+	padding: 0;
+	text-align: center;
 }

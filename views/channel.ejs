@@ -1,0 +1,100 @@
+<%- include("html_header") -%>
+<body>
+	<%- include("site_header") -%>
+	<div class="py-3 mx-5">
+		<!-- Top banner -->
+		<div class="row align-items-center">
+			<div class="col">
+				<!-- Channel name -->
+				<div class="row">
+					<span class="serif fs-4"><%=displayName%></span>
+				</div>
+				<!-- Date selected -->
+				<div class="row">
+					<span class="">Schedule for <strong><%=displayDate.toDateString();%></strong></span>
+				</div>
+			</div>
+			<!-- Date picker: min is today, max is 2 weeks from today -->
+			<div class="col-auto">
+				<form action="/channel" method="post">
+					<input type="date" name="scheduleDay" id="" value="<%=displayDateNoTime%>" min="<%=displayTodayNoTime%>" max="<%=displayTwoWeeksNoTime%>">
+					<button class="btn btn-primary" type="submit">🔍</button>
+				</form>
+			</div>
+		</div>
+		<hr class="showing-header">
+		<!-- Schedule -->
+		<div class="row">
+			<!-- If program array is empty, tell user -->
+			<%if (displayProgramArray.length == 0) {%>
+			<div>Nothing loaded. Check that the date or station ID entered is valid.</div>
+			<%} else {%>
+			<%for (var i = 0; i < displayProgramArray.length; i++) {%>
+			<div class="row list-view-showing">
+				<!-- Timeslot -->
+				<div class="col-auto list-timeslot"><%=displayProgramArray[i].program_time.toLocaleTimeString([], {hour: '2-digit', minute:'2-digit'})%></div>
+				<div class="col">
+					<!-- Collapsible banner, i indicates number of collapse ID -->
+					<div class="row" type="button" data-bs-toggle="collapse" data-bs-target="#collapse<%=i%>" aria-expanded="false" aria-controls="collapse<%=i%>">
+						<!-- Program title -->
+						<div class="col-12 program-name px-0"><%=displayProgramArray[i].program_title%></div>
+						<div class="col-12 list-info px-0">
+							<!-- If program ID starts with "SH" (show), list no episode title -->
+							<%if (displayProgramArray[i].program_ID.slice(0, 2) == "SH") {%>
+							<em>No episode title listed</em>
+							<!-- Otherwise list episode title -->
+							<%} else {%>
+							<%=displayProgramArray[i].program_eptitle%>
+							<%}%>
+							<!-- If program is new, indicate that -->
+							<%if (displayProgramArray[i].program_new == true) {%>
+							<span class="new-text">NEW</span>
+							<%}%>
+							<!-- If program is a movie, indicate that -->
+							<%if (displayProgramArray[i].program_ID.slice(0, 2) == "MV") {%>
+							<span class="movie-text">MOVIE</span>
+							<%}%>
+						</div>
+					</div>
+				</div>
+				<div class="col-auto hidden-buttons">
+					<!-- <button class="btn btn-fav" data-bs-toggle="tooltip" data-bs-placement="top" title="Add to favorites">💛</button> -->
+					<!-- Reminder button for EP -->
+					<%if (displayProgramArray[i].program_ID.slice(0, 2) == "EP") {%>
+					<a href="https://www.google.com/calendar/render?action=TEMPLATE&text=<%=encodeURIComponent(displayProgramArray[i].program_title + ' - "' + displayProgramArray[i].program_eptitle + '"')%>
+						&details=<%=encodeURIComponent(displayProgramArray[i]?.program_description?.description1000[0]?.description)%>%0AAdded%20with%20Guidey.
+						&location=<%=encodeURIComponent(displayName)%>&dates=<%=encodeURIComponent(displayProgramArray[i].program_timeCal)%>
+						%2F<%=encodeURIComponent(displayProgramArray[i].program_endCal)%>&ctz=America%2FNew_York" target="_blank" rel="noopener noreferrer">
+						<button class="btn btn-remind" data-bs-toggle="tooltip" data-bs-placement="top" title="Remind me"><p class="bell">🔔</p></button></a>
+					<%} else {%>
+					<!-- Reminder button for MV or SH -->
+					<a href="https://www.google.com/calendar/render?action=TEMPLATE&text=<%=encodeURIComponent(displayProgramArray[i].program_title)%>
+						&details=<%=encodeURIComponent(displayProgramArray[i]?.program_description?.description1000[0]?.description)%>%0AAdded%20with%20Guidey.
+						&location=<%=encodeURIComponent(displayName)%>&dates=<%=encodeURIComponent(displayProgramArray[i].program_timeCal)%>
+						%2F<%=encodeURIComponent(displayProgramArray[i].program_endCal)%>&ctz=America%2FNew_York" target="_blank" rel="noopener noreferrer">
+						<button class="btn btn-remind" data-bs-toggle="tooltip" data-bs-placement="top" title="Remind me"><p class="bell">🔔</p></button></a>
+					<%}%>
+				</div>
+				<div class="collapse" id="collapse<%=i%>">
+					<div class="card card-body container-fluid">
+						<div class="row">
+							<div class="col-auto">
+								<img class="" src="<%=displayProgramArray[i]?.program_image%>" alt="">
+							</div>
+							<div class="col">
+								<div class="row">
+									<div class="col"><%=displayProgramArray[i]?.program_description?.description1000[0]?.description%></div>
+								</div>
+								<div class="row">
+									<div class="col small"><%=displayProgramArray[i].program_genre%> - <%=displayProgramArray[i].program_runtime%> - <%=displayProgramArray[i].program_releaseDate%></div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<%}}%>
+		</div>
+		<hr class="">
+	</div>
+<%- include("footer") -%>

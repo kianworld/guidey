@@ -1,0 +1,42 @@
+<%- include("html_header") -%>
+<body>
+	<%- include("site_header") -%>
+	<div class="py-3 mx-5">
+		<div class="row align-items-center">
+			<div class="col">
+				<div class="row">
+					<span class="serif fs-4"><%=displayLineupArray[displayLineNum].provider_name%></span>
+				</div>
+			</div>
+			<div class="col-auto">
+				<%for (var i = 0; i < displayLineupArray.length; i++) {%>
+				<%var iPlus = i + 1;%>
+				<a href="/guide?provider=<%=i%>"><button type="submit" class="btn btn-primary btn-provider" data-bs-toggle="tooltip" data-bs-placement="bottom" title="<%=displayLineupArray[i].provider_name%>"><%=iPlus%></button></a>
+				<%}%>
+				<a href="/provideredit"><button type="submit" class="btn btn-primary btn-edit">EDIT</button></a>
+			</div>
+		</div>
+		<hr class="showing-header">
+		<%for (var i = 0; i < displayChannelListings.length; i++) {%>
+			<div class="row list-view-showing">
+				<div class="col-auto">
+					<span class="row channel-number"><%=displayChannelListings[i].station_number%></span>
+					<span class="row channel-callsign"><%=displayChannelListings[i].station_callsign%></span>
+				</div>
+				<div class="col">
+					<div class="row">
+						<div class="col-12 channel-name px-0"><a href="/channel?id=<%=displayChannelListings[i].station_ID%>&name=<%=displayChannelListings[i].station_name%>&date=<%=displayTodayNoTime%>"><%=displayChannelListings[i].station_name%></a></div>
+					</div>
+				</div>
+			</div>
+		<!-- <div class="row">
+			<div class="">
+				<div class="row align-items-center list-view-channel">
+					<div class="col-1 channel-number"><%=displayChannelListings[i].station_number%><br><p style="font-size:small"><%=displayChannelListings[i].station_callsign%></p></div>
+					<div class="col-auto channel-name"><a href="/channel?id=<%=displayChannelListings[i].station_ID%>&name=<%=displayChannelListings[i].station_name%>&date=<%=displayTodayNoTime%>"><%=displayChannelListings[i].station_name%></a></div>
+				</div>
+			</div>
+		</div> -->
+		<%}%>
+	</div>
+<%- include("footer") -%>
